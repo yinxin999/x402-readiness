@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x402-readiness"
+version = "0.1.0"
+description = "Audit whether an x402 endpoint can actually be reached and paid."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "yinxin999" }]
+keywords = ["x402", "payments", "usdc", "stablecoin", "agents", "linter"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+x402-readiness = "x402_readiness.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yinxin999/x402-readiness"
+
+[tool.setuptools.packages.find]
+include = ["x402_readiness*"]
